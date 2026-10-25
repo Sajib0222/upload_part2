@@ -15,7 +15,7 @@ ProductPrice(){ //13
   print("Total price =$total");
 }
 StudenthighestMarks(){ //14
-  Map<String,int>student={
+  Map<String,int>student={                 //
     "sajib":78,
     "rakib":70,
     "rifat":57,
