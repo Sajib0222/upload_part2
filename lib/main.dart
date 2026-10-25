@@ -45,7 +45,7 @@ null_awareoperator(){ //16
   print(name?.length);
 }
 Nullablelist(){ //17
-  List<int>?numbers=null;
+  List<int>?numbers=null; //
   print(numbers?.length);
 }
 Formatexception(){ //18
