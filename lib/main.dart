@@ -48,7 +48,7 @@ Nullablelist(){ //17
   List<int>?numbers=null;
   print(numbers?.length);
 }
-Formatexception(){ //19
+Formatexception(){ //18
   String text ="a,b,c";
   try{
     int number = int.parse(text);
@@ -58,7 +58,7 @@ Formatexception(){ //19
     print("Invaliud number formatr !");
   }
 }
-EvenOddPrimeDuplicate(){
+EvenOddPrimeDuplicate(){ //19
   List<int>number=[2,3,4,5,6,7,8,9,10,2,3];
   var even=number.where((n)=>n% 2== 0).toList();
   var odd=number.where((n)=>n% 2!= 0).toList();
@@ -76,6 +76,43 @@ EvenOddPrimeDuplicate(){
   print("Duplicates :$duplicates");
 
 }
+EmployeeSalary(){ //20
+  Map<String,double>employee={
+    "sajib":20000,
+    "shakib":30000,
+    "rakib":40000,
+    "rajib":50000,
+  };
+  employee.updateAll((name, salary)=>salary *1.10);
+  print(employee);
+}
+FizzBuzzPrime(){ //21
+  List<int>number=[2,3,4,5,6,7,8,10,15,20,21,23,25,30,27,30,45];
+  for(int n in number){
+    if(n %15==0){
+      print("$n=FizzBuzz");
+    }else if(n%3 ==0){
+      print("$n=Fizz");
+    }
+    else if(n %5 ==0){
+      print("$n=Buzz");
+    }else if(n>1 && List.generate(n-2,(i)=>i+2 ).every((i)=>n%i !=0)){
+  print("$n=prime");
+  }
+    else{
+      print(n);
+    }
+  }
+}
+Finddifferencemaximumandminimumvalues(){ //22
+  List<int>number=[10,25,5,40,15];
+  int largest =number.reduce((a ,b)=>a >b ? a:b);
+  int smallest =number.reduce((a ,b)=>a <b ? a:b);
+   int difference =largest -smallest ;
+   print("largest: $largest");
+   print("smallest:$smallest");
+   print("difference:$difference");
+}
 void main(){
   WherwFuncation();
   SquarNumber();
@@ -84,6 +121,9 @@ void main(){
   ShoppingcartQuantity();
   null_awareoperator();
   Nullablelist();
-Formatexception();
-EvenOddPrimeDuplicate();
+  Formatexception();
+  EvenOddPrimeDuplicate();
+  EmployeeSalary();
+  FizzBuzzPrime();
+  Finddifferencemaximumandminimumvalues();
 }
